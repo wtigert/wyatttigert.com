@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/wtigert
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.wyatttigert.com
+  * I am wtigert (https://keybase.io/wtigert) on keybase.
+  * I have a public key with fingerprint 628A AB58 029D E062 E4F6  B88D BCCF C98E F596 2487
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101fff661ce6e122a2805436aff4578b754c2410d1d8dcf38c9eabebe8856b22cf30a",
+      "fingerprint": "628aab58029de062e4f6b88dbccfc98ef5962487",
+      "host": "keybase.io",
+      "key_id": "bccfc98ef5962487",
+      "kid": "0101fff661ce6e122a2805436aff4578b754c2410d1d8dcf38c9eabebe8856b22cf30a",
+      "uid": "a560bc4a2a2c9a3bc78086cfd0a33000",
+      "username": "wtigert"
+    },
+    "merkle_root": {
+      "ctime": 1587006794,
+      "hash_meta": "4036576c448735e9701e8a1313a6018c2b310fe95d8585036c37314920eb7e8d",
+      "seqno": 15937705
+    },
+    "revoke": {
+      "sig_ids": [
+        "88e09014c99109843af60820cddd540ab75ec7b4dda73b2968c7bdbd251b3d4b0f"
+      ]
+    },
+    "service": {
+      "hostname": "www.wyatttigert.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1587006799,
+  "expire_in": 157680000,
+  "prev": "8dd73e315c6e598f1f659f4ed4dc799dc7bd34ebd806d1073c5cc27ba2e6692d",
+  "seqno": 60,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMK4AnicrVNtaBxFGL7UNImxYolS/RPB9YtKOGd3dmZn71SQ1s9UimJ/pKle5uOd
+uzW53XN3c9dQriqx0v6JopTgB9b+0YI9FSpFvYj1sFrxE4toKVSjIBWlIqIBI8TZ
+04KIP/01zPA8z/s8z8y8c/45ucGeX4qt84pbr2r3fNBpTufunf9o8w5LRGrGKuyw
+JqG7wJSCJC1NBsoqWMhGttaaUlsCBdtxuMMQcTHlWrvEY8IjrnRcGylbMSU1ZtIH
+LkAAY4QKxzFHiFsjlg7CMsS1OAhTI0sdxrkgDDm+AkQdcDUVjCkhpZY+A0186rjM
+M8RKlGQMY07wBPJBZM7MptS19x/4/9n3dFeOE4qEdLmRkT7HQnoMMSq1QhxjhFAG
+TCAOeRUMupEGJmtqNUesKsSTU1CKoyjNupVpkCFswjyEqOe7Jh9PKqUqpNwQXYQp
+8ah0TRRMwPeQDYzb2MacIptJR2AbafCJYoQRA5bYw7brOwiEB0wZGwncH0bZBB97
+HiLGQgz1aBKy6UlQNrUlVmHcYgyQj2xX+r6NfOZiriliDpJKKeIibvoB6QlXKe5h
+4fiUmZ0SyiG2wMoVSFv3NLNpcT2QXfHsns7mbzTyjRmepn/1kJdR1TirxVEayWjK
+ACppWksKWT/pTK3LAFH6W6skglCZx2IYdYiTIApNGoP8d3X+iAXba0EMpSBDmNqY
+uQiUzYG6kWRKeRiwTSQF4jNta0p87YJylTRsleXBLgjFEFU28rAkUjqe4A5Q6jv/
+6JIa0ZSXjaYpMOTpdAxWs3NkW2+uZzDXt3pV9otyg+euPfu3rM/7VzZ9d/LE3Kk9
+z337WEW+Pjzxa7mifn587LWHjg2te7h3eeFlsfe+Qy9+eeau6pqx9t0Dn766/ELv
+RjSw/tTxB7ZeMPTe8p7+fXcW9aPFP77gR2f721sKQ4Ub36gtLP4eDN8eIj6aXjE7
+0ffN9fEdPy7mDxef302vWWg98tbeQ50nVuHjPy2x9icLTw239tEBfWznrZ/dFDLd
+umTFuXludGc/hsOb3l1q86WLX7n0w4Prl+fHt7S+f2bDS8MPrtv9vtf66oa3Nzz7
+5PSRxVs6F0W39R4Yv/rM3OLY0JV9na9PTlyrG/nN8xeW3zywXWz7eNfR04NydfmH
+39jKxvrpE9dddnAtGd11+Zr9T882/wRuH4OD
+=2Zrw
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/wtigert
+
+==================================================================

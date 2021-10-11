@@ -1,0 +1,75 @@
+:root {
+  --main-red: #ed3c48;
+}
+
+/* General */
+html, body {
+  font: 18px Inter, sans-serif;
+}
+
+/* Links */
+a {
+  color: var(--main-red);
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* Layout */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/* About Section */
+#about h1 {
+  color: white;
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--main-red);
+}
+#about h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#about p, #about ul {
+  margin-bottom: 4rem;
+}
+#about strong {
+  color: var(--main-red);
+  font-weight: 300;
+}
+#about ul {
+  padding: 0;
+  list-style: none;
+}
+#about ul > li {
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 959px) {
+  main {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+/** these .<n> values for the calculations come from
+responsive trial and what felt 'good' **/
+@media screen and (max-width: 541px) {
+  footer {
+    font-size: calc(100vw * .03);
+  }
+}
+@media screen and (max-width: 460px) {
+  #about h1 {
+    font-size: calc(100vw * .23);
+  }
+}
