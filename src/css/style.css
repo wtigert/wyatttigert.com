@@ -1,15 +1,25 @@
 :root {
-  --main-red: #ed3c48;
+  --background: #FDFBF7;
+  
+  /** sticking with a blue for now but I like red so I may switch (hence fallback) **/
+  --primary: #0D558C;
+  --fallback: #AE0F1A;
+
+  /** I would love to use this but it's contrast ratio is v bad **/
+  --non-accessible: #ed3c48;
 }
 
 /* General */
 html, body {
   font: 18px Inter, sans-serif;
 }
+body {
+  background-color: var(--background);
+}
 
 /* Links */
 a {
-  color: var(--main-red);
+  color: var(--primary);
 }
 a:hover {
   text-decoration: none;
@@ -27,14 +37,14 @@ section {
 
 /* About Section */
 #about h1 {
-  color: white;
+  color: var(--background);
   font-size: 6rem;
   font-weight: 900;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  -webkit-text-stroke: 2px var(--main-red);
+  -webkit-text-stroke: 2px var(--primary);
 }
-#about h3 {
+#about h2 {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -43,7 +53,7 @@ section {
   margin-bottom: 4rem;
 }
 #about strong {
-  color: var(--main-red);
+  color: var(--primary);
   font-weight: 300;
 }
 #about ul {
