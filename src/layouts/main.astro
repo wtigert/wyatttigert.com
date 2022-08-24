@@ -1,5 +1,4 @@
 ---
-import { Markdown } from 'astro/components';
 import 'minireset.css';
 import '../css/style.css';
 
@@ -39,9 +38,7 @@ const copyright = `\u{00A9} ${new Date().getFullYear()} Wyatt Tigert`;
       <slot />
     </section>
     <footer>
-      <Markdown>
-        {copyright} [ [CV](https://read.cv/wat) / inquiries@wyatttigert.com ]
-      </Markdown>
+      {copyright} [ <a href="https://read.cv/wat">CV</a> / <a href="mailto:inquiries@wyatttigert.com">inquiries@wyatttigert.com</a> ]
     </footer>
   </main>
 </body>
