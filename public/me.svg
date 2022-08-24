@@ -1,0 +1,39 @@
+<svg class="me-svg" width="108px" height="300px" viewBox="0 0 108 391" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+  <defs>
+    <path d="M40.5,13.5 L27,13.5 L27,27 L67.5,27 L67.5,13.5 L54,13.5 L54,0 L40.5,0 L40.5,13.5 Z" id="path-1"></path>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g id="me-2" sketch:type="MSLayerGroup">
+      <path
+        d="M77.625,80.25 L67.5,80.25 L67.5,80.25 L67.5,67.5 L54,67.5 L54,80.25 L13.5,80.25 L13.5,94.5 L0,94.5 L0,129 L13.5,129 L13.5,189.75 L81,189.75 L81,134.25 L94.5,134.25 L94.5,80.25 L77.625,80.25 Z"
+        id="shirt" fill="#D0011B" sketch:type="MSShapeGroup"></path>
+      <rect id="left-arm" fill="#F5989D" sketch:type="MSShapeGroup"
+        transform="translate(6.750000, 159.000000) scale(-1, 1) translate(-6.750000, -159.000000) " x="0" y="129"
+        width="13.5" height="60"></rect>
+      <rect id="right-arm" fill="#F5989D" sketch:type="MSShapeGroup"
+        transform="translate(101.250000, 167.750000) scale(-1, 1) translate(-101.250000, -167.750000) " x="94.5" y="134"
+        width="13.5" height="67.5"></rect>
+      <path
+        d="M25.875,188.75 L13.5,188.75 L13.5,350 L27,350 L27,201.5 L67.5,201.5 L67.5,363.5 L81,363.5 L81,188.75 L69.375,188.75 L25.875,188.75 Z"
+        id="pants" fill="#273A4A" sketch:type="MSShapeGroup"></path>
+      <path
+        d="M54,67.5 L54,80.25 L40.5,80.25 L40.5,67.5 L27,67.5 L27,40.5 L54,40.5 L54,54 L67.5,54 L67.5,67.5 L54,67.5 Z"
+        id="face" fill="#F5989D" sketch:type="MSShapeGroup"></path>
+      <g id="hat">
+        <use fill="#FFB735" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+        <use fill="none" xlink:href="#path-1"></use>
+      </g>
+      <path d="M67.5,33.75 L67.5,27 L27,27 L27,40.5 L54,40.5 L54,54 L67.5,54 L67.5,33.75 Z" id="hair" fill="#603913"
+        sketch:type="MSShapeGroup"></path>
+      <rect id="left-foot" fill="#464646" sketch:type="MSShapeGroup" x="0" y="349" width="27" height="13.5"></rect>
+      <rect id="right-foot" fill="#464646" sketch:type="MSShapeGroup" x="67.5" y="363.5" width="13.5" height="13.5">
+      </rect>
+      <rect id="right-foot-toe" fill="#464646" sketch:type="MSShapeGroup" x="55" y="363.5" width="13.5" height="13.5">
+        <animateTransform dur=".5s" calcMode="spline" keySplines="0.3 0 1 1; 0.1 0.3 0.3 1; 0 0 1 1;0 0 1 1"
+          attributeName="transform" type="translate" values="0, 0; 0, 13.5; 0,0; 0,0; 0,0" repeatCount="indefinite">
+        </animateTransform>
+      </rect>
+    </g>
+  </g>
+</svg>
