@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/main.astro
-title: Wyatt Tigert .com
-description: Personal website of Wyatt Tigert. Software Engineer with over 18 years experience developing meaningful and well built web applications.
+title: Wyatt Tigert - A Longtime Software Engineer for the Web
+description: Personal website of Wyatt Tigert. Software Engineer with over 18 years experience building meaningful and well built web applications.
 ---
 
 # Wyatt Tigert
@@ -10,7 +10,7 @@ description: Personal website of Wyatt Tigert. Software Engineer with over 18 ye
 
 ## currently
 
-Engineering lead @ [dutchie](https://dutchie.com/careers) building integrations for cannabis POS systems
+Staff Engineer @ [dutchie](https://dutchie.com/careers) building developer tools and integrations for cannabis POS systems
 
 ## previously
 
