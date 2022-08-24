@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.20.9"
+    "astro": "^1.0.8"
   },
   "dependencies": {
     "minireset.css": "^0.0.7"
