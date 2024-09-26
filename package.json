@@ -12,7 +12,7 @@
     "astro": "^4.15.9"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.10.3",
+    "@astrojs/mdx": "^3.1.7",
     "minireset.css": "^0.0.7"
   }
 }
