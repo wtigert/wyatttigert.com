@@ -2,7 +2,7 @@
 import "minireset.css";
 import "../css/style.css";
 
-const { content } = Astro.props;
+const { frontmatter } = Astro.props;
 const copyright = `\u{00A9} ${new Date().getFullYear()} Wyatt Tigert`;
 ---
 
@@ -13,18 +13,18 @@ const copyright = `\u{00A9} ${new Date().getFullYear()} Wyatt Tigert`;
     <meta name="viewport" content="width=device-width" />
 
     <!-- Page Info -->
-    <title>{content.title}</title>
+    <title>{frontmatter.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="description" content={content.description} />
+    <meta name="description" content={frontmatter.description} />
 
     <!-- Social -->
-    <meta property="og:title" content={content.title} />
-    <meta property="og:description" content={content.description} />
+    <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:description" content={frontmatter.description} />
     <meta property="og:type" content="website" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:creator" content="Wyatt Tigert" />
-    <meta property="twitter:title" content={content.title} />
-    <meta property="twitter:description" content={content.description} />
+    <meta property="twitter:title" content={frontmatter.title} />
+    <meta property="twitter:description" content={frontmatter.description} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
