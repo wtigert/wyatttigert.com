@@ -9,10 +9,12 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^4.16.19"
+    "astro": "^4.16.19",
+    "esbuild": ">=0.25.0"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.7",
-    "minireset.css": "^0.0.7"
+    "minireset.css": "^0.0.7",
+    "esbuild": ">=0.25.0"
   }
 }
