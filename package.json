@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^4.16.18"
+    "astro": "^4.16.19"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.7",
