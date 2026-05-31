@@ -1,0 +1,23 @@
+# Career, consumed by layouts/home.html (field-guide "specs" block).
+# The job with `current = true` is rendered on the "Currently" row (with role + detail);
+# the rest fall to the "Previously" row as inline links.
+
+[[jobs]]
+name = 'ActBlue'
+url = 'https://actblue.com/'
+
+[[jobs]]
+name = 'dutchie'
+url = 'https://dutchie.com/'
+
+[[jobs]]
+name = 'Inflect'
+url = 'https://inflect.com/'
+
+[[jobs]]
+name = 'Humble Bundle'
+url = 'https://humblebundle.com/'
+
+[[jobs]]
+name = 'BitTorrent'
+url = 'https://bittorrent.com/'

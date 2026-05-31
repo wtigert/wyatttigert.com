@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <header>
+    <div>
+      <h1 class="title">{{ .Title }}</h1>
+      <p class="lede">{{ .Description }}</p>
+    </div>
+    <div class="hmark" aria-hidden="true">
+      <svg viewBox="0 0 110 110"><circle cx="40" cy="42" r="34" fill="#1f5c43"/><circle cx="82" cy="38" r="18" fill="#16140f"/><circle cx="74" cy="80" r="14" fill="#7a9e86"/></svg>
+    </div>
+  </header>
+
+  <div class="list">
+    {{- range .Pages }}
+    <a class="post" href="{{ .RelPermalink }}"><span class="marker"></span><span class="pmeta">{{ .Date.Format "Jan 2006" }}<br>{{ .Params.readingTime | default .ReadingTime }} min</span><span><span class="ptitle">{{ .Title }}</span><span class="pexc">{{ .Description | default .Summary }}</span></span></a>
+    {{- end }}
+  </div>
+
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+{{ end }}

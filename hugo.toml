@@ -1,0 +1,38 @@
+baseURL = 'https://wyatttigert.com/'
+locale = 'en-us'
+title = 'Wyatt Tigert - Longtime Engineer for the Web'
+theme = 'wat'
+
+[markup]
+[markup.highlight]
+codeFences = false
+
+[menus]
+[[menus.main]]
+name = 'Index'
+pageRef = '/'
+weight = 10
+[[menus.main]]
+name = 'Ramblings'
+pageRef = '/posts'
+weight = 20
+
+[params]
+author = 'Wyatt Tigert'
+brand = 'Wyatt Tigert'
+email = 'inquiries@wyatttigert.com'
+tagline = 'Staff software engineer building accessible and reliable web applications and services.'
+taglineYears = '15+ years in.'
+# cv = 'https://read.cv/wat'
+belief = 'The best software is built by teams that are diverse, equitable, and empathetic.'
+since = 2010
+
+[[params.social]]
+name = 'GitHub'
+url = 'https://github.com/wtigert'
+[[params.social]]
+name = 'LinkedIn'
+url = 'https://linkedin.com/in/wtigert'
+# [[params.social]]
+# name = 'CV'
+# url = 'https://read.cv/wat'

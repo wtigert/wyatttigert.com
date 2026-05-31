@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <article>
+    <div class="marks" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="kicker">No. {{ printf "%02d" (int (.Params.number | default 1)) }} / {{ .Params.kicker | default "Engineering" }}</div>
+    <h1>{{ .Title }}</h1>
+    <p class="dek">{{ .Description }}</p>
+    <div class="pmeta"><span>{{ .Date.Format "Jan 2006" }}</span><span>{{ .Params.readingTime | default .ReadingTime }} min read</span><span>By {{ site.Params.author }}</span></div>
+    <div class="body">
+      {{ .Content }}
+    </div>
+  </article>
+
+  <footer>
+    <a class="back" href="{{ .CurrentSection.RelPermalink }}">← All ramblings</a>
+    {{ partial "footer.html" . }}
+  </footer>
+{{ end }}

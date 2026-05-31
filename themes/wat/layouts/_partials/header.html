@@ -1,0 +1,5 @@
+{{- $suffix := "The Web" -}}
+{{- if eq .Kind "page" -}}{{ $suffix = "Ramblings" }}{{- end -}}
+<div class="bar">
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>

@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <div class="hero">
+    <h1 class="name">Wyatt Tigert</h1>
+    <div class="cluster" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <circle cx="66" cy="70" r="60" fill="#1f5c43"/>
+        <circle cx="152" cy="76" r="36" fill="#16140f"/>
+        <circle cx="104" cy="152" r="44" fill="#7a9e86"/>
+      </svg>
+    </div>
+  </div>
+  <p class="tagline">{{ site.Params.tagline }} <span class="y">{{ site.Params.taglineYears }}</span></p>
+
+  <div class="specs">
+    {{- range where hugo.Data.work.jobs "current" true }}
+    <span class="lbl">Currently:</span> <b>{{ .role }}, <a href="{{ .url }}">{{ .name }}</a></b> &nbsp;·&nbsp; {{ .detail }}<br>
+    {{- end }}
+    <span class="lbl">Previously:</span> {{ range $i, $job := where hugo.Data.work.jobs "current" "!=" true }}{{ if $i }} &nbsp;·&nbsp; {{ end }}<a href="{{ $job.url }}">{{ $job.name }}</a>{{ end }}<br>
+    <br/>
+    <span class="belief">{{ site.Params.belief }}</span>
+  </div>
+
+  {{ partial "footer.html" . }}
+{{ end }}
