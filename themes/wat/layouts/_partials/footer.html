@@ -1,0 +1,13 @@
+{{- if .IsHome -}}
+  <div class="baseline">
+    <div class="channels">
+      {{- range site.Params.social }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+    </div>
+    <div class="meta">© {{ now.Year }} {{ site.Params.author }} &nbsp;·&nbsp; <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></div>
+  </div>
+{{- else -}}
+  <div class="meta">
+    <span>© {{ now.Year }} {{ site.Params.author }}</span>
+    <span><a href="{{ site.Params.cv }}">CV</a> &nbsp;·&nbsp; <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></span>
+  </div>
+{{- end -}}

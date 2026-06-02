@@ -1,0 +1,198 @@
+/* Home (opt3-home): name, tagline, career band, notes grid, baseline footer. */
+.hero {
+	display: flex;
+}
+.name {
+	font-weight: 800;
+	font-size: clamp(3.2rem, 14vw, 8rem);
+	line-height: 0.84;
+	letter-spacing: -0.045em;
+	margin-top: clamp(0.5rem, 2vw, 1rem);
+	text-transform: uppercase;
+}
+.tagline {
+	max-width: 46ch;
+	margin-top: 1rem;
+	font-weight: 600;
+	font-size: clamp(1rem, 1.6vw, 1.25rem);
+	line-height: 1.3;
+}
+.tagline .y {
+	color: var(--green);
+}
+
+.cluster {
+	flex-shrink: 0;
+	width: min(36vw, 230px);
+}
+.cluster svg {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* "Currently ..." sentence: an adaptive tagline naming the current role. */
+.specs {
+	margin-top: clamp(2rem, 5vw, 2rem);
+	max-width: 62ch;
+	font-size: clamp(0.9rem, 0.82rem + 0.45vw, 1.02rem);
+	line-height: 1.85;
+	letter-spacing: 0.01em;
+	color: var(--ink);
+}
+.specs b {
+	font-weight: 700;
+}
+/* Role sits inline in the sentence: tier color (from .role--*) + light weight,
+   not the mono tag styling used in the Previously roster. */
+.now-role {
+	font-weight: 600;
+}
+.specs a {
+	text-decoration: none;
+	color: var(--green);
+	font-weight: 600;
+	box-shadow: inset 0 -1px 0 var(--green-2);
+}
+.specs a:hover,
+.specs a:focus-visible {
+	box-shadow: inset 0 -1.1em 0 rgba(111, 154, 127, 0.4);
+	outline: none;
+}
+/* Previously: a vertical roster of big links (opt3-home .roster) under a small
+   mono "Previously" header, each tagged with a color-coded role. */
+.previously {
+	margin-top: clamp(2rem, 5vw, 3rem);
+}
+.prev-head {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: clamp(0.66rem, 0.6rem + 0.3vw, 0.74rem);
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--ink-soft);
+	margin-bottom: 0.6rem;
+}
+.roster {
+	display: flex;
+	flex-direction: column;
+}
+.roster a {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.3rem 0;
+	text-decoration: none;
+	color: var(--ink);
+	transition: color 0.16s, transform 0.16s;
+}
+.roster a:hover,
+.roster a:focus-visible {
+	color: var(--green);
+	transform: translateX(6px);
+	outline: none;
+}
+.roster .job {
+	font-weight: 700;
+	line-height: 1.04;
+	letter-spacing: -0.025em;
+	font-size: clamp(1.4rem, 4vw, 2.5rem);
+}
+/* Role tag keeps its tier color on hover (set explicitly, so the anchor's
+   green hover doesn't override it). */
+.role {
+	flex-shrink: 0;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: clamp(0.6rem, 0.55rem + 0.25vw, 0.7rem);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: 500;
+	white-space: nowrap;
+}
+.role--staff {
+	color: var(--green);
+}
+.role--senior {
+	color: var(--green-2);
+}
+.role--engineer {
+	color: var(--ink-soft);
+}
+
+/* Belief sits low, grouped with the footer at the bottom of the .sheet column. */
+.belief {
+	font-style: italic;
+	font-size: clamp(1rem, 1.4vw, 1.15rem);
+	max-width: 46ch;
+	margin-top: auto;
+	padding-top: clamp(2rem, 5vw, 3rem);
+}
+
+.baseline {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-top: clamp(1.6rem, 4vw, 2.2rem);
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+.channels {
+	display: flex;
+	gap: 1rem;
+	font-size: clamp(0.7rem, 0.6rem + 0.4vw, 0.78rem);
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.channels a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--ink);
+	box-shadow: inset 0 -2px 0 var(--green);
+	padding: 0.4rem 0;
+}
+.channels a:hover,
+.channels a:focus-visible {
+	color: var(--green);
+	outline: none;
+}
+
+/* Reset the shared flex/border .meta back to home's stacked variant. */
+.baseline .meta {
+	display: block;
+	border-top: 0;
+	padding-top: 0;
+	margin-top: 0.9rem;
+	font-size: clamp(0.66rem, 0.6rem + 0.3vw, 0.74rem);
+}
+@media (max-width: 620px) {
+	.hero {
+		flex-direction: column;
+	}
+	.cluster {
+		width: 48vw;
+	}
+	/* Bump the body copy up a notch — the fluid min sizes read too small on phones. */
+	.tagline {
+		font-size: 1.2rem;
+		line-height: 1.35;
+	}
+	.specs {
+		font-size: 1.12rem;
+		line-height: 1.6;
+	}
+	/* Stack each Previously row: role drops under the company name, giving a
+	   taller tap target and room for the role tag to grow legible. */
+	.roster a {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.4rem;
+		padding: 1rem 0;
+	}
+	.roster .job {
+		font-size: 1.7rem;
+	}
+	.role {
+		font-size: 0.8rem;
+	}
+}

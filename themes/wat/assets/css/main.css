@@ -1,0 +1,99 @@
+@import "components/footer.css";
+@import "components/home.css";
+@import "components/ramblings.css";
+@import "components/post.css";
+
+/* @font-face lives inline in _partials/head.html so esbuild (css.Build) does
+   not try to resolve the static /fonts/ paths at build time. */
+
+:root {
+	--paper: #ece7d8;
+	--ink: #16140f;
+	--ink-soft: #55564a;
+	--green: #1f5c43;
+	--green-2: #7a9e86;
+	--rule: #c6bda7;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: clamp(15px, 1vw + 11px, 18px);
+}
+
+body {
+	background: var(--paper);
+	color: var(--ink);
+	font-family: "Archivo", sans-serif;
+	line-height: 1.45;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	overflow-x: hidden;
+}
+
+body::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: 50;
+	pointer-events: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+	opacity: 0.05;
+	mix-blend-mode: multiply;
+}
+
+a {
+	color: inherit;
+}
+
+/* baseof's <main> must not break the .sheet flex column */
+main {
+	display: contents;
+}
+
+.sheet {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: clamp(1.8rem, 5vw, 3.6rem);
+	position: relative;
+	z-index: 2;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: clamp(0.7rem, 0.5rem + 0.6vw, 0.78rem);
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--ink-soft);
+	padding-bottom: 0.8rem;
+	flex-direction: row-reverse;
+}
+.bar nav ul {
+	display: flex;
+	gap: 1.2rem;
+	list-style: none;
+}
+.bar nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--ink);
+	padding: 0.4rem 0;
+}
+.bar nav a[aria-current] {
+	color: var(--green);
+}
+.bar nav a:hover,
+.bar nav a:focus-visible {
+	color: var(--green);
+	outline: none;
+}

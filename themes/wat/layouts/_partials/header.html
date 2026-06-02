@@ -1,0 +1,11 @@
+{{- $posts := site.GetPage "/posts" -}}
+<div class="bar">
+  <nav>
+    <ul>
+      <li><a href="{{ "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}>Index</a></li>
+      {{- if and $posts $posts.RegularPages }}
+      <li><a href="{{ $posts.RelPermalink }}"{{ if or (eq . $posts) (eq .CurrentSection $posts) }} aria-current="page"{{ end }}>Ramblings</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+</div>

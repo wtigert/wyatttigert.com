@@ -1,0 +1,18 @@
+/* Shared footer chrome: the <footer> wrapper + .meta line used by section + page.
+   Home overrides .meta inside .baseline (see home.css). */
+footer { margin-top: auto; padding-top: 2rem; }
+
+.meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .66rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  border-top: 1px solid var(--rule);
+  padding-top: .8rem;
+}
+.meta a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--green); }

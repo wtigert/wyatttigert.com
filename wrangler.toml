@@ -1,5 +1,8 @@
 name = "wyatttigert-com"
 compatibility_date = "2025-03-25"
 
+# Static-assets-only Worker (no `main` script): serves Hugo's build output.
+# `hugo` writes to ./public; unmatched routes fall back to Hugo's 404.html.
 [assets]
-directory = "./dist"
+directory = "./public"
+not_found_handling = "404-page"

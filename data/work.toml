@@ -1,0 +1,45 @@
+# Career, consumed by layouts/home.html.
+# The job with `current = true` renders as the "Currently ..." sentence; the rest
+# render in the "Previously" roster as a vertical list of links, each tagged with
+# its role. `tier` drives the role color (see home.css .role--*):
+#   staff    -> primary green   (--green)
+#   senior   -> muted green     (--green-2)
+#   engineer -> light grey      (--ink-soft)
+#
+# For the current job, every field except `name` is optional — the sentence
+# reflows around whatever is present:
+#   name only             -> "Currently at ActBlue."
+#   + role                -> "Currently a Staff Software Engineer at ActBlue."
+#   + detail              -> "Currently at ActBlue, working on the ... team."
+#   + url                 -> ActBlue becomes a link
+# `detail` should read naturally after "working on" (include any article).
+
+[[jobs]]
+name = 'ActBlue'
+url = 'https://actblue.com/'
+role = 'Staff Engineer'
+tier = 'staff'
+
+[[jobs]]
+name = 'dutchie'
+url = 'https://dutchie.com/'
+role = 'Staff Engineer'
+tier = 'staff'
+
+[[jobs]]
+name = 'Inflect'
+url = 'https://inflect.com/'
+role = 'Senior Engineer'
+tier = 'senior'
+
+[[jobs]]
+name = 'Humble Bundle'
+url = 'https://humblebundle.com/'
+role = 'Senior Engineer'
+tier = 'senior'
+
+[[jobs]]
+name = 'BitTorrent'
+url = 'https://bittorrent.com/'
+role = 'Engineer'
+tier = 'engineer'
