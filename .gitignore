@@ -1,9 +1,13 @@
 # build output
-dist
+public/
+resources/
+.hugo_build.lock
+
+# caches (Hugo / Wrangler)
+.wrangler/
 
 # dependencies
 node_modules/
-.snowpack/
 
 # logs
 npm-debug.log*

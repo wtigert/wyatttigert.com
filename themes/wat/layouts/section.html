@@ -10,7 +10,7 @@
   </header>
 
   <div class="list">
-    {{- range .Pages }}
+    {{- range .RegularPages }}
     <a class="post" href="{{ .RelPermalink }}"><span class="marker"></span><span class="pmeta">{{ .Date.Format "Jan 2006" }}<br>{{ .Params.readingTime | default .ReadingTime }} min</span><span><span class="ptitle">{{ .Title }}</span><span class="pexc">{{ .Description | default .Summary }}</span></span></a>
     {{- end }}
   </div>

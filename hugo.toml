@@ -6,23 +6,15 @@ theme = 'wat'
 [markup]
 [markup.highlight]
 codeFences = false
-
-[menus]
-[[menus.main]]
-name = 'Index'
-pageRef = '/'
-weight = 10
-[[menus.main]]
-name = 'Ramblings'
-pageRef = '/posts'
-weight = 20
+[markup.goldmark.parser]
+# Let the image render hook emit a block <figure> without an invalid <p> wrapper.
+wrapStandAloneImageWithinParagraph = false
 
 [params]
 author = 'Wyatt Tigert'
 brand = 'Wyatt Tigert'
 email = 'inquiries@wyatttigert.com'
-tagline = 'Staff software engineer building accessible and reliable web applications and services.'
-taglineYears = '15+ years in.'
+tagline = 'Software engineer building accessible and reliable web applications and services.'
 # cv = 'https://read.cv/wat'
 belief = 'The best software is built by teams that are diverse, equitable, and empathetic.'
 since = 2010

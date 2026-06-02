@@ -4,14 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Personal website for wyatttigert.com (Wyatt Tigert — staff software engineer). The
-repo is **mid-migration from Astro to Hugo** on the `hugo-switch` branch. The old
-Astro source (`astro.config.mjs`, `src/`, `package.json`, `src/pages/index.mdx`)
-has been deleted in the working tree but still exists in git history at `HEAD` —
-the real site content (bio, job history, links) lives in the old
-`src/pages/index.mdx` and has **not yet been ported** into the Hugo build.
+Personal website for wyatttigert.com (Wyatt Tigert — staff software engineer).
+Built with **Hugo**. The site was migrated from Astro on the `hugo-switch` branch
+(pending merge to `main`); the old Astro source is gone from the working tree but
+remains in git history before the `Baseline switch from astro to hugo` commit if
+you ever need to reference the original copy.
 
-Requires **Hugo extended** (theme declares min `0.146.0`; developed against `0.162.1`).
+Hugo min version `0.146.0` (developed against `0.162.1`). The **extended**
+distribution is *not* required: the CSS pipeline uses `css.Build` (esbuild),
+which ships in every Hugo binary — there's no Dart Sass / `toCSS` step. (The
+Cloudflare build image happens to provide extended Hugo anyway.)
 
 ## Commands
 
@@ -23,6 +25,25 @@ hugo                 # production build into ./public/
 
 There is no npm/test/lint tooling anymore — those belonged to the deleted Astro
 setup. Don't run `npm` commands.
+
+## Deployment
+
+Deployed to **Cloudflare Workers** as a static-assets-only Worker (no `main`
+script), built by **git-connected Workers Builds** — every push to the connected
+branch runs the build and deploys.
+
+- **`wrangler.toml`** declares the Worker: `[assets].directory = "./public"`
+  (Hugo's output) with `not_found_handling = "404-page"` (serves Hugo's
+  `404.html`).
+- **Build command:** `hugo`  •  **Deploy command:** `npx wrangler deploy`.
+- Hugo version is pinned in **`.tool-versions`** (`hugo 0.162.1`) and via the
+  `HUGO_VERSION` build variable in the Cloudflare dashboard. Workers Builds' image
+  already includes Hugo extended + Node, so no install step is needed.
+- `npx wrangler deploy` pulls the latest Wrangler (there is no `package.json` to
+  pin it) — intentional, to keep the repo free of Node tooling.
+
+Local checks: `wrangler dev` serves `./public` like production; `wrangler deploy
+--dry-run` validates `wrangler.toml` without publishing.
 
 ## Architecture
 

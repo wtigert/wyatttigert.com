@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="hero">
+    <h1 class="name">404</h1>
+    <div class="cluster" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <circle cx="66" cy="70" r="60" fill="#1f5c43"/>
+        <circle cx="152" cy="76" r="36" fill="#16140f"/>
+        <circle cx="104" cy="152" r="44" fill="#7a9e86"/>
+      </svg>
+    </div>
+  </div>
+  <p class="tagline">That page wandered off. <a href="{{ "/" | relLangURL }}">Head back home.</a></p>
+
+  {{ partial "footer.html" . }}
+{{ end }}

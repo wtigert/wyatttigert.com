@@ -1,7 +1,9 @@
 {{ define "main" }}
+  {{- $n := 1 }}
+  {{- range $i, $p := .CurrentSection.RegularPages }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $n = add $i 1 }}{{ end }}{{ end -}}
   <article>
     <div class="marks" aria-hidden="true"><i></i><i></i><i></i></div>
-    <div class="kicker">No. {{ printf "%02d" (int (.Params.number | default 1)) }} / {{ .Params.kicker | default "Engineering" }}</div>
+    <div class="kicker">No. {{ printf "%02d" $n }} / {{ .Params.kicker | default "Engineering" }}</div>
     <h1>{{ .Title }}</h1>
     <p class="dek">{{ .Description }}</p>
     <div class="pmeta"><span>{{ .Date.Format "Jan 2006" }}</span><span>{{ .Params.readingTime | default .ReadingTime }} min read</span><span>By {{ site.Params.author }}</span></div>

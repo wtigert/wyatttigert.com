@@ -71,7 +71,7 @@ main {
 	justify-content: space-between;
 	align-items: center;
 	font-family: "IBM Plex Mono", monospace;
-	font-size: 0.7rem;
+	font-size: clamp(0.7rem, 0.5rem + 0.6vw, 0.78rem);
 	letter-spacing: 0.16em;
 	text-transform: uppercase;
 	color: var(--ink-soft);
@@ -84,8 +84,10 @@ main {
 	list-style: none;
 }
 .bar nav a {
+	display: inline-block;
 	text-decoration: none;
 	color: var(--ink);
+	padding: 0.4rem 0;
 }
 .bar nav a[aria-current] {
 	color: var(--green);

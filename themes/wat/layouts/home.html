@@ -9,16 +9,28 @@
       </svg>
     </div>
   </div>
-  <p class="tagline">{{ site.Params.tagline }} <span class="y">{{ site.Params.taglineYears }}</span></p>
+  <p class="tagline">{{ site.Params.tagline }} <span class="y">{{ sub now.Year (int site.Params.since) }}+ years in.</span></p>
 
   <div class="specs">
     {{- range where hugo.Data.work.jobs "current" true }}
-    <span class="lbl">Currently:</span> <b>{{ .role }}, <a href="{{ .url }}">{{ .name }}</a></b> &nbsp;·&nbsp; {{ .detail }}<br>
+    {{- $name := .name }}{{ $url := .url }}{{ $role := .role }}{{ $tier := .tier }}{{ $detail := .detail }}
+    <p class="currently">Currently{{ with $role }} a <span class="now-role role--{{ $tier }}">{{ . }}</span>{{ end }} at {{ if $url }}<a href="{{ $url }}">{{ $name }}</a>{{ else }}<b>{{ $name }}</b>{{ end }}{{ with $detail }}, working on {{ . }}{{ end }}.</p>
     {{- end }}
-    <span class="lbl">Previously:</span> {{ range $i, $job := where hugo.Data.work.jobs "current" "!=" true }}{{ if $i }} &nbsp;·&nbsp; {{ end }}<a href="{{ $job.url }}">{{ $job.name }}</a>{{ end }}<br>
-    <br/>
-    <span class="belief">{{ site.Params.belief }}</span>
   </div>
+
+  <section class="previously" aria-labelledby="previously-head">
+    <h2 class="prev-head" id="previously-head">Previously</h2>
+    <nav class="roster" aria-label="Previous roles">
+      {{- range where hugo.Data.work.jobs "current" "!=" true }}
+      <a href="{{ .url }}">
+        <span class="job">{{ .name }}</span>
+        <span class="role role--{{ .tier }}">{{ .role }}</span>
+      </a>
+      {{- end }}
+    </nav>
+  </section>
+
+  <p class="belief">{{ site.Params.belief }}</p>
 
   {{ partial "footer.html" . }}
 {{ end }}

@@ -1,0 +1,15 @@
+{{- /* Image render hook: resolve co-located bundle images, lazy-load, optional caption. */ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $src := .Destination -}}
+{{- $res := "" -}}
+{{- if not $u.IsAbs -}}
+  {{- with .Page.Resources.GetMatch (strings.TrimPrefix "./" .Destination) -}}
+    {{- $res = . -}}
+    {{- $src = .RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+<figure class="post-figure">
+  <img src="{{ $src }}" alt="{{ .PlainText }}"
+    {{- with $res }}{{ if eq .ResourceType "image" }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}{{ end }} loading="lazy" decoding="async">
+  {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
